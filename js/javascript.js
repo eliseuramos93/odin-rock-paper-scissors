@@ -128,18 +128,17 @@ function showScore(
   };
 }
 
-function game() {
+function game(playerButton) {
   let playerScore = 0;
   let computerScore = 0;
   let scoreArray = [playerScore, computerScore];
   let keepGoing = false;
   let computerSelection;
-  let playerSelection;
+  let playerSelection = playerButton;
   let roundResults;
 
    do {
     computerSelection = getComputerChoice(generateRandomNumber());
-    playerSelection = getPlayerChoice();
     roundResults = playRound(playerSelection, computerSelection);
     score = updateScore(roundResults, scoreArray);
     playerScore = scoreArray[0];
@@ -163,5 +162,21 @@ function game() {
   }
 }
 
-game();
+const container = document.querySelector('#test');
+console.log(container);
 
+const rockButton = document.createElement('button');
+const paperButton = document.createElement('button');
+const scissorsButton = document.createElement('button');
+
+rockButton.textContent = "Play with Rock!";
+paperButton.textContent = "Play with Paper";
+scissorsButton.textContent = "Play with Scissors!"
+
+container.appendChild(rockButton);
+container.appendChild(paperButton);
+container.appendChild(scissorsButton);
+
+rockButton.addEventListener('click', () => game("rock"));
+paperButton.addEventListener('click', () => game("paper"));
+scissorsButton.addEventListener('click', () => game('scissors'));
