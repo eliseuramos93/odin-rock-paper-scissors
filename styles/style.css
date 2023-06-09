@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-image: url("../img/pallet-town.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #333;
+  background-blend-mode: soft-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 10vh;
+}
+
+.bulbasaur:hover,
+.charmander:hover,
+.squirtle:hover {
+  scale: 1.2;
+}
+
+.bulbasaur:hover {
+  filter: drop-shadow(12px 5px 10px #50C878);
+}
+
+.charmander:hover {
+  filter: drop-shadow(12px 5px 10px #E0115F);
+}
+
+.squirtle:hover {
+  filter: drop-shadow(12px 5px 10px #0096FF);
+}
+
+.text-box {
+  background-color: white;
+  color: black;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 24px;
+  padding: 20px;
+  margin-top: 50px;
+  border: 10px double black;
+  height: 100px;
+  width: 800px;
+}
+
+#results-box {
+  font-size: 20px;
+}
